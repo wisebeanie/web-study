@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <style>
+        body {
+            background-color: black;
+        }
+        div {
+            /* border: 1px solid white; */
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            background-color: black;
+        }
+        #header {
+            flex-direction: column;
+        }
+        #contents {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 9;
+            background-color: rgb(37, 36, 36)
+        }
+        #header_nav {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1;
+        }
+        #menu {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+        }
+        #trend {
+            flex-grow: 5;
+        }
+        #continue {
+            flex-grow: 5;
+        }
+        #header_nav img{
+            width: auto;
+            height: 50px;;
+        }
+        i {
+            padding-top: 15px;
+        }
+        #menu #browse {
+            flex-grow: 1;
+            color: white;
+            border-bottom: 3px solid rgb(197, 2, 2);
+        }
+        #menu #my_list {
+            flex-grow: 1;
+            color: gray;
+        }
+        #contents #trend {
+            flex-grow: 1;
+        }
+        #contents #trend_contents {
+            flex-grow: 2;
+        }
+        #contents #trend h2 {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin: .4em 0 0 .5em;
+        }
+        #contents #trend h3 {
+            font-size: 1em;
+            font-weight: 700;
+            margin: 0 0 .5em .7em;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="header_nav">
+                <i class="fas fa-bars" style="color: grey; padding-top: 15px; flex-grow: 1; text-align: center;"></i>
+                <img src="https://cdn.eyesmag.com/wp-content/uploads/2018/07/05175150/netflix-ultra-streaming-tier-main.jpg">
+                <i class="fas fa-search" style="color: gray; flex-grow: 7; text-align: right;"></i>
+                <i class="fas fa-ellipsis-v" style="color: gray; flex-grow: 1; text-align: center;"></i>  
+            </div>
+            <div id="menu">
+                <div id="browse">
+                    <h4>BROWSE</h4>
+                </div>
+                <div id="my_list">
+                    <h4>MY LIST</h4>
+                </div>
+            </div>
+        </div>
+        <div id="contents">
+            <div id="trend">
+                <h2 style="color: white;">Trending Now</h2>
+                <h3 style="color: gray;">Recommended for you</h3>
+                <!-- <span>ALL ></span> -->
+            </div>
+            <div id="trend_contents">
+
+            </div>
+            <div id="continue">
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
