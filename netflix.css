@@ -87,8 +87,9 @@ h3 {
 }
 #trend_contents img {
     width: 100px;   
-    margin-left: 15px;
+    margin-left: 18px;
     flex: 0 0 auto;
+    border-radius: 3px;
 }
 #continue {
     display: flex;
@@ -107,9 +108,10 @@ h3 {
 }
 #continue_contents img {
     width: 100px;   
-    margin-left: 17px;
+    margin-left: 18px;
     flex: 0 0 auto;
+    border-radius: 3px;
 }
-#continue #information h2{
-    margin-top: 1em;
+#continue h2 {
+    margin-top: 1.6em;
 }
