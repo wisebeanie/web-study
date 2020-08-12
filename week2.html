@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week2</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+        #email {
+            display: block;
+            width: 200px;
+            margin: 10px auto 50px;
+        }
+        #password {
+            display: block;
+            width: 200px;
+            margin: 0 auto 50px;
+        }
+        button {
+            display: block;
+            width: 200px;
+            margin: 0 auto;
+        }
+        #fail {
+            width: 300px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Login</h1>
+
+    <input id="email" type="text" placeholder="이메일을 입력해주세요">
+    <input id="password" type="password" placeholder="비밀번호를 입력해주세요">
+    <button onclick="login()">로그인</button>
+
+    <div id="fail" style="color: white;">
+
+    </div>
+
+    <script>
+        var userList = [
+            {
+            email: "test1@naver.com",
+            password: "abc1234!",
+            },
+            {
+            email: "test2@naver.com",
+            password: "abc12345!",
+            },
+            {
+            email: "test3@naver.com",
+            password: "abc12346!",
+            },
+            {
+            email: "test4@naver.com",
+            password: "abc12347!",
+            },
+            {
+            email: "test5@naver.com",
+            password: "abc12348!",
+            },
+        ];
+
+        function login() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var login = false;
+            var index = 0;
+            var fail = document.getElementById("fail");
+            
+            while (!login) {
+                if (email == userList[index].email) { // email만 맞을 경우
+                    if (password == userList[index].password) {
+                        login = true;
+                        // alert("로그인 되었습니다!");
+                        fail.textContent="로그인에 성공하였습니다!";
+                        fail.style.backgroundColor="green";
+                        // location.href="week1.html";
+                    }
+                    else if (password != userList[index].password) {
+                        alert("비밀번호가 다릅니다");
+                        location.href="week2.html";
+                        break;
+                    }
+                    continue;
+                }
+                index++;
+                if (userList[index] == null) { // userList와 동일한 정보가 없을 때
+                    // alert("로그인 정보가 다릅니다");
+                    fail.textContent="로그인에 실패하였습니다.";
+                    fail.style.backgroundColor = "red";
+                    // location.href="week2.html";
+                }
+            }
+        }
+    </script>
+
+
+</body>
+</html>
